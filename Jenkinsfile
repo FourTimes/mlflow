@@ -21,7 +21,7 @@ pipeline {
         stage('api deployment') {
             steps {
                 script {
-                        if ( (env.BRANCH_NAME).startsWith('feature-stag') ) {
+                        if ( (env.BRANCH_NAME).startsWith('dev') ) {
                             sh '''
                                 echo "Deploying to Staging Environment...."
                             '''
