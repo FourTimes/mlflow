@@ -24,6 +24,7 @@ pipeline {
                         if ( (env.BRANCH_NAME).startsWith('dev') ) {
                             sh '''
                                 echo "Deploying to Staging Environment...."
+				env
                             '''
                         } 
                         else if (env.BRANCH_NAME == 'main') {
